@@ -11,7 +11,7 @@ browser-based SSH server so that users can log into the VM without any tools
 besides a web browser, and a registration application that allows class
 participants to generate their own SSH accounts.
 
-The browser-based SSH server uses [WebSSH](https://pypi.org/project/webssh/)
+The browser-based SSH server uses [WebSSH](https://pypi.org/project/webssh/).
 
 The registration application is a small [Flask](http://flask.pocoo.org/)
 webapp.  The CSS for the registration application is based on styles from [this
