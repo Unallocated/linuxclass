@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linux 102 Registration</title>
+    <style type="text/css">
+        body {
+            margin: 0px auto;
+            max-width:650px;
+            line-height:1.6;
+            font-size:18px;
+            color: black;
+            padding:0 10px;
+        }
+        h1, h2, h3 {
+            line-height:1.2
+        }
+        div#header-image {
+            padding-top: 1em;
+            background-color: black;
+            text-align: center;
+        }
+        form {
+            margin: 1em 0;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 0.5em;
+        }
+        input, textarea {
+            margin-bottom: 1em;
+        }
+        textarea {
+            min-height: 12em; resize: vertical;
+        }
+        input.danger {
+            color: #cc2f2e;
+        }
+        input[type=submit] {
+            align-self: start;
+            min-width: 10em;
+        }
+        .error {
+            margin: 1em 0;
+            padding: 1em;
+            background: #d89aa3;
+            border: 1px solid #cc2f2e;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-image">
+        <img src="{{ url_for('static', filename='UnallocatedLogoSmall.png') }}"></div>
+
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}
+  </header>
+  {% for error in errors %}
+    <div class="error">{{ error }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}
+</section>
+
+</body></html>
+

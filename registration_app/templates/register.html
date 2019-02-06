@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>Linux 102 Class Registration</h1>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+      <label for="name">Full name</label>
+      <input name="name" id="name" required>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required>
+      <label for="password">Confirm Password</label>
+      <input type="password" name="password2" id="password2" required>
+      <input id='register' type="submit" value="Register">
+  </form>
+{% endblock %}
